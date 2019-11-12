@@ -16,6 +16,23 @@ def reverse_array(array)
   array.reverse
 end
 def kesha_maker(array)
-  nd_array =array.split("")
-  nd_array.each_with_index do |x| nd_array[2] = "$" end
+array.each do |x|
+  x[2] ="$"
+
+end
+end
+def find_a(array)
+  array.select {|a| a[0] == "a"}
+end
+def sum_array(array)
+array.inject { |sum, n| sum + n }
+end
+def add_s(array)
+array.collect do |a| if a != array[1]
+a.insert(-1,"s")
+else
+  a
+end
+end
+
 end
